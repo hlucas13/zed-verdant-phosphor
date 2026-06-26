@@ -45,7 +45,7 @@
         "background": "#070d18",
         "element.background": "#0a101d",
         "element.hover": "#111a2b",
-        "element.active": "#1620334d",
+        "element.active": "#bbfd5040",
         "element.selected": "#111a2b4d",
         "element.disabled": "#1a2538",
         "drop_target.background": "#111a2b66",
