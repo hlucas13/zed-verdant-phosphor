@@ -27,6 +27,17 @@ jobs:
           DEFAULT_BUMP: patch
           RELEASE_BRANCHES: main
 
+      - name: Sync extension.toml version
+        run: |
+          VERSION="${{ steps.tag.outputs.new_tag }}"
+          VERSION="${VERSION#v}"
+          sed -i "s/^version = .*/version = \"${VERSION}\"/" extension.toml
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add extension.toml
+          git commit -m "Sync extension.toml to ${VERSION}" || true
+          git push || true
+
       - name: Package theme
         run: |
           mkdir -p dist/themes
