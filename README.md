@@ -72,7 +72,7 @@ General-purpose borders are kept subtle and slate-toned. The phosphor lime only 
 mkdir -p ~/.config/zed/themes
 
 # Copy the theme file
-cp verdant-phosphor.json ~/.config/zed/themes/
+cp themes/verdant-phosphor.json ~/.config/zed/themes/
 ```
 
 Then open Zed, press **Cmd + K, Cmd + T**, and select either **Verdant Phosphor Dark** or **Verdant Phosphor Light**.
@@ -81,17 +81,27 @@ Then open Zed, press **Cmd + K, Cmd + T**, and select either **Verdant Phosphor 
 
 Once accepted into the Zed extension registry, this theme will be installable directly from the Extensions panel inside the editor.
 
+### Dev Installation
+
+To test the latest version before it's published:
+
+1. Clone this repository
+2. In Zed, open the Extensions panel (`Cmd + Shift + X`)
+3. Click **Install Dev Extension** and select the cloned directory
+
 ---
 
 ## ✦ File Structure
 
 ```
 zed-verdant-phosphor/
-├── verdant-phosphor.json   ← the theme definition (Zed schema v0.2.0)
+├── extension.toml              ← extension manifest
+├── themes/
+│   └── verdant-phosphor.json   ← theme definition
 ├── screenshots/
 │   ├── dark.png
 │   └── light.png
-├── LICENSE                 ← MIT
+├── LICENSE                     ← MIT
 └── README.md
 ```
 

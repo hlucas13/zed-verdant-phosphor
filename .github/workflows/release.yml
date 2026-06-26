@@ -3,7 +3,7 @@ name: Manual Release
 on:
   push:
     tags:
-      - 'v*'
+      - "v*"
 
 permissions:
   contents: write
@@ -16,8 +16,9 @@ jobs:
 
       - name: Package theme
         run: |
-          mkdir -p dist
-          cp verdant-phosphor.json dist/
+          mkdir -p dist/themes
+          cp themes/verdant-phosphor.json dist/themes/
+          cp extension.toml dist/
           cp LICENSE dist/
           cp README.md dist/
 

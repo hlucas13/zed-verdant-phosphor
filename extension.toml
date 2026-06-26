@@ -1,0 +1,7 @@
+id = "verdant-phosphor-theme"
+name = "Verdant Phosphor"
+version = "1.0.0"
+schema_version = 1
+authors = ["Homero Lucas do Prado <hlucas13@users.noreply.github.com>"]
+description = "A meticulously crafted dark & light theme — slate-blue depths with phosphorescent lime accents. WCAG-compliant, italic-aware, Ayu + Catppuccin inspired."
+repository = "https://github.com/hlucas13/zed-verdant-phosphor"

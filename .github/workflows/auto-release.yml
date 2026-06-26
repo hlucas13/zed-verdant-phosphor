@@ -5,7 +5,7 @@ on:
     branches:
       - main
     paths:
-      - "verdant-phosphor.json"
+      - "themes/verdant-phosphor.json"
 
 permissions:
   contents: write
@@ -29,8 +29,9 @@ jobs:
 
       - name: Package theme
         run: |
-          mkdir -p dist
-          cp verdant-phosphor.json dist/
+          mkdir -p dist/themes
+          cp themes/verdant-phosphor.json dist/themes/
+          cp extension.toml dist/
           cp LICENSE dist/
           cp README.md dist/
 
@@ -47,7 +48,7 @@ jobs:
             ### Installation
             ```sh
             mkdir -p ~/.config/zed/themes
-            cp verdant-phosphor.json ~/.config/zed/themes/
+            cp themes/verdant-phosphor.json ~/.config/zed/themes/
             ```
 
             Then **Cmd + K, Cmd + T** inside Zed.
