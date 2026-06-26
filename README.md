@@ -4,9 +4,20 @@ A meticulously crafted colour theme for the [Zed](https://zed.dev) code editor, 
 
 > Slate-blue depths kissed by phosphorescent lime. A theme that favours readability without sacrificing style.
 
-![Verdant Phosphor Dark](screenshots/dark.png)
+<details>
+<summary><b>📸 Screenshots</b></summary>
 
-![Verdant Phosphor Light](screenshots/light.png)
+**Dark**
+
+<img src="screenshots/dark.png" alt="Verdant Phosphor Dark" width="720" />
+
+<br>
+
+**Light**
+
+<img src="screenshots/light.png" alt="Verdant Phosphor Light" width="720" />
+
+</details>
 
 ---
 
@@ -16,18 +27,18 @@ A meticulously crafted colour theme for the [Zed](https://zed.dev) code editor, 
 
 ### Palette at a Glance
 
-| Role | Dark | Light |
-|---|---|---|
-| Editor background | `#060914` | `#ffffff` |
-| Panel / sidebar | `#0b1322` | `#f1f4fb` |
-| Primary text | `#dce0e6` | `#2c3e50` |
-| Accent (phosphor lime) | `#bbfd50` | `#bbfd50` |
-| Keywords | `#ff9e64` (warm coral) | `#e64a19` (deep orange) |
-| Strings | `#9acd6a` (chartreuse) | `#558b2f` (olive) |
-| Functions | `#f5c060` (amber) | `#ef6c00` (burnt orange) |
-| Types | `#ffb380` (peach) | `#e65100` (russet) |
-| Constants / numbers | `#d49ef0` (lavender) | `#7c4dff` (violet) |
-| Comments | `#667280` *italic* | `#8d97a5` *italic* |
+| Role                   | Dark                   | Light                    |
+| ---------------------- | ---------------------- | ------------------------ |
+| Editor background      | `#060914`              | `#ffffff`                |
+| Panel / sidebar        | `#0b1322`              | `#f1f4fb`                |
+| Primary text           | `#dce0e6`              | `#2c3e50`                |
+| Accent (phosphor lime) | `#bbfd50`              | `#bbfd50`                |
+| Keywords               | `#ff9e64` (warm coral) | `#e64a19` (deep orange)  |
+| Strings                | `#9acd6a` (chartreuse) | `#558b2f` (olive)        |
+| Functions              | `#f5c060` (amber)      | `#ef6c00` (burnt orange) |
+| Types                  | `#ffb380` (peach)      | `#e65100` (russet)       |
+| Constants / numbers    | `#d49ef0` (lavender)   | `#7c4dff` (violet)       |
+| Comments               | `#667280` _italic_     | `#8d97a5` _italic_       |
 
 ---
 
