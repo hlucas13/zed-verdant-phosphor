@@ -1,0 +1,26 @@
+name: Sync to Zed Extensions
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - "themes/verdant-phosphor.json"
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Update extension in Zed registry
+        uses: huacnlee/zed-extension-action@v1
+        with:
+          extension_id: verdant-phosphor-theme
+          extension_path: extensions/verdant-phosphor-theme
+          extensions_repo: zed-industries/extensions
+          github_token: ${{ secrets.ZED_EXTENSIONS_TOKEN }}
+          default_bump: patch
