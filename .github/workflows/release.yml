@@ -1,0 +1,47 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Package theme
+        run: |
+          mkdir -p dist
+          cp verdant-phosphor.json dist/
+          cp LICENSE dist/
+          cp README.md dist/
+
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          name: "Verdant Phosphor ${{ github.ref_name }}"
+          body: |
+            ## ✦ Verdant Phosphor ${{ github.ref_name }}
+
+            A meticulously crafted colour theme for Zed — slate-blue depths with phosphorescent lime accents.
+
+            ### Installation
+
+            ```sh
+            mkdir -p ~/.config/zed/themes
+            cp verdant-phosphor.json ~/.config/zed/themes/
+            ```
+
+            Then **Cmd + K, Cmd + T** inside Zed and select the theme.
+
+            ### What's Changed
+
+            See the [commits](https://github.com/hlucas13/zed-verdant-phosphor/commits/main) for details.
+          files: |
+            dist/*
+          generate_release_notes: true
