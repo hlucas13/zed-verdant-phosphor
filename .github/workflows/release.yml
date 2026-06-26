@@ -1,0 +1,29 @@
+name: Manual Release
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Package theme
+        run: |
+          mkdir -p dist
+          cp verdant-phosphor.json dist/
+          cp LICENSE dist/
+          cp README.md dist/
+
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          name: "Verdant Phosphor ${{ github.ref_name }}"
+          files: dist/*
+          generate_release_notes: true
